@@ -6,15 +6,19 @@ namespace OOP_Clovek
 {
     public class Clovek
     {
+        // soukromé proměnné - nejsou dostupné mimo třídu Clovek
+        private int energie;
+        private int dovednost;
+
+        // vlastnosti - zveřejňují hodnoty ven z třídy
         public string Jmeno { get; set; }
         public string Prijmeni { get; set; }
         public DateTime DatumNarozeni { get; set; }
-        private int energie;
-        public int Energie { get=>energie; }
+        public int Energie { get => energie; }
         public int Zivot { get; set; }
-        private int dovednost;
-        public int Dovednost { get=>dovednost; }
+        public int Dovednost { get => dovednost; }
 
+        //konstruktor - pomocí této metody vznikne konkrétní objekt - instance třídy
         public Clovek()
         {
             Jmeno = "";
@@ -24,6 +28,7 @@ namespace OOP_Clovek
             Zivot = 100;
             dovednost = 0;
         }
+        
 
         public void ZvysitDovednost()
         {

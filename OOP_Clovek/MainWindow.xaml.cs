@@ -20,13 +20,26 @@ namespace OOP_Clovek
     /// </summary>
     public partial class MainWindow : Window
     {
+        Clovek karel;
+        Clovek jan;
+
         public MainWindow()
         {
             InitializeComponent();
-            Clovek karel = new Clovek();
+            
+            karel = new Clovek();
             karel.Jmeno = "Karel";
-            Clovek jan = new Clovek();
+            Zobraz(karel, txt1);
+
+            jan = new Clovek();
             jan.Jmeno = "Jan";
+            Zobraz(jan, txt2);
         }
+
+        public void Zobraz(Clovek clovek, TextBox textBox)
+        {
+
+        }
+
     }
 }
