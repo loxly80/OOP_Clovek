@@ -7,9 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+
         <TextBox Name="txt1" HorizontalAlignment="Left" Margin="10,10,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="245" Height="397"/>
         <TextBox Name="txt2" HorizontalAlignment="Left" Margin="509,10,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Grid.ColumnSpan="2" Height="397"/>
+        <Button Content="Posuň čas" HorizontalAlignment="Left" Margin="323,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.275,-0.073" Height="37" Width="119" Click="Button_Click"/>
 
     </Grid>
 </Window>

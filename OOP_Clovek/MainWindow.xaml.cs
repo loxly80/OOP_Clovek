@@ -26,9 +26,11 @@ namespace OOP_Clovek
         public MainWindow()
         {
             InitializeComponent();
-            
+
             karel = new Clovek();
             karel.Jmeno = "Karel";
+            karel.Prijmeni = "Cveček";
+            karel.DatumNarozeni = new DateTime(2006, 5, 24);
             Zobraz(karel, txt1);
 
             jan = new Clovek();
@@ -38,8 +40,19 @@ namespace OOP_Clovek
 
         public void Zobraz(Clovek clovek, TextBox textBox)
         {
-
+            textBox.Text = clovek.Prijmeni + " " + clovek.Jmeno + "\n";
+            textBox.Text += "Datum narození: " + clovek.DatumNarozeni.ToShortDateString() + "\n";
+            textBox.Text += "Život: " + clovek.Zivot.ToString() + "\n";
+            textBox.Text += "Energie: " + clovek.Energie.ToString() + "\n";
+            textBox.Text += "Dovednost: " + clovek.Dovednost.ToString() + "\n";
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            karel.Zestarnout();
+            jan.Zestarnout();
+            Zobraz(karel, txt1);
+            Zobraz(jan, txt2);
+        }
     }
 }

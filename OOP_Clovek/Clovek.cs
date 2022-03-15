@@ -29,6 +29,15 @@ namespace OOP_Clovek
             dovednost = 0;
         }
         
+        public void Zestarnout()
+        {
+            energie -= 10;
+            if(energie < 0)
+            {
+                energie = 0;
+            }
+            Zivot += 2;
+        }
 
         public void ZvysitDovednost()
         {
